@@ -109,7 +109,7 @@ h1 span {
   .main-container {
     flex-direction: row;
     justify-content: space-between;
-    width: 60rem;
+    width: 65rem;
   }
 
   .image-header, .image-header::after, .color-overlay {
@@ -148,17 +148,20 @@ h1 span {
 
   h1 {
     padding: 4rem 0 2rem;
-    width: 19rem;
+    width: 24rem;
+    font-size: 2.2rem;
   }
 
   .description {
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 0;
-    width: 19rem;
+    width: 24rem;
+    opacity: 0.6;
+    line-height: 1.5rem;
   }
 
   .data-info {
     font-size: 0.6rem;
-    padding-top: 3rem;
+    padding-top: 5rem;
   }
 }
