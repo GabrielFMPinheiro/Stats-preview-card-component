@@ -1,1 +1,164 @@
+/* Reset */
 
+html {
+  font-size: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  color: hsl(0, 0%, 100%);
+}
+
+/* Style */
+
+body {
+  width: 100%;
+  background-color: hsl(233, 47%, 7%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+  position: relative;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 0.625rem;
+  padding-bottom: 0.625rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.image-header, .image-header::after, .color-overlay {
+  width: 100%;
+  height: 15rem;
+  border-radius: 0.625rem 0.625rem 0 0;
+  content: '';
+}
+
+.image-header::after {
+  background-image: url("../images/image-header-mobile.jpg");
+  background-size: cover;
+  position: absolute;
+  mix-blend-mode: multiply;
+  opacity: 0.78;
+}
+
+.color-overlay {
+  background-color: hsl(277, 64%, 61%);
+  position: absolute;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.77rem;
+  padding: 2.25rem 1rem 1.5rem;
+}
+
+h1 span {
+  color:hsl(277, 64%, 61%)
+}
+
+.description {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 0 1.9rem 2rem;
+  line-height: 1.35rem;
+  opacity: 0.7;
+}
+
+.data-info {
+  font-family: 'Lexend Deca', sans-serif;
+  text-align: center;
+  padding-bottom: 1.6rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.data-info span {
+  display: block;
+  text-transform: initial;
+  margin-bottom: 0.4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.attribution {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    height: 100vh;
+  }
+
+  .main-container {
+    flex-direction: row;
+    width: 60rem;
+    justify-content: space-between;
+  }
+
+  .image-header, .image-header::after, .color-overlay {
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    border-radius: 0 0.625rem 0.625rem 0;
+    order: 1;
+  }
+
+  .image-header::after {
+    background-image: url("../images/image-header-desktop.jpg");
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-header {
+    width: 20rem;
+  }
+
+  section .data-container {
+    display: flex;
+    gap: 4rem
+  }
+
+  h1, .description, .data-info {
+    text-align: left;
+  }
+
+  h1 {
+    padding: 4rem 0 2rem;
+    width: 19rem;
+  }
+
+  .description {
+    padding: 0;
+    font-size: 0.8rem;
+    width: 19rem;
+  }
+
+  .data-info {
+    padding-top: 3rem;
+    font-size: 0.6rem;
+  }
+}
