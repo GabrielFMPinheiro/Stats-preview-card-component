@@ -5,53 +5,53 @@ html {
 }
 
 * {
-  padding: 0;
-  margin: 0;
   border: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
   color: hsl(0, 0%, 100%);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 /* Style */
 
 body {
-  width: 100%;
+  align-items: center;
   background-color: hsl(233, 47%, 7%);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   padding: 5rem 0;
   position: relative;
+  width: 100%;
 }
 
 main {
+  align-items: center;
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 0.625rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 20rem;
-  background-color: hsl(244, 38%, 16%);
-  border-radius: 0.625rem;
-  padding-bottom: 0.625rem;
   margin-bottom: 2rem;
+  padding-bottom: 0.625rem;
   position: relative;
+  width: 20rem;
 }
 
 .image-header, .image-header::after, .color-overlay {
-  width: 100%;
-  height: 15rem;
   border-radius: 0.625rem 0.625rem 0 0;
   content: '';
+  height: 15rem;
+  width: 100%;
 }
-
+/* Using Pseudo-elements to overlay img and working with mix-blend-mode */
 .image-header::after {
   background-image: url("../images/image-header-mobile.jpg");
   background-size: cover;
-  position: absolute;
   mix-blend-mode: multiply;
   opacity: 0.78;
+  position: absolute;
 }
 
 .color-overlay {
@@ -60,45 +60,45 @@ main {
 }
 
 h1 {
-  text-align: center;
   font-size: 1.77rem;
   padding: 2.25rem 1rem 1.5rem;
+  text-align: center;
 }
 
 h1 span {
-  color:hsl(277, 64%, 61%)
+  color: hsl(277, 64%, 61%)
 }
 
 .description {
-  text-align: center;
   font-size: 0.9rem;
-  padding: 0 1.9rem 2rem;
   line-height: 1.35rem;
   opacity: 0.7;
+  padding: 0 1.9rem 2rem;
+  text-align: center;
 }
 
 .data-info {
-  font-family: 'Lexend Deca', sans-serif;
-  text-align: center;
-  padding-bottom: 1.6rem;
-  text-transform: uppercase;
-  font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.6);
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 0.8rem;
+  padding-bottom: 1.6rem;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .data-info span {
   display: block;
-  text-transform: initial;
-  margin-bottom: 0.4rem;
   font-size: 1.5rem;
   font-weight: 700;
+  margin-bottom: 0.4rem;
+  text-transform: initial;
 }
 
 .attribution {
-  text-align: center;
-  position: absolute;
   bottom: 0;
   font-size: 0.8rem;
+  position: absolute;
+  text-align: center;
 }
 
 @media screen and (min-width: 1000px) {
@@ -108,17 +108,17 @@ h1 span {
 
   .main-container {
     flex-direction: row;
-    width: 60rem;
     justify-content: space-between;
+    width: 60rem;
   }
 
   .image-header, .image-header::after, .color-overlay {
-    width: 50%;
-    height: 100%;
-    top: 0;
-    right: 0;
     border-radius: 0 0.625rem 0.625rem 0;
+    height: 100%;
     order: 1;
+    right: 0;
+    top: 0;
+    width: 50%;
   }
 
   .image-header::after {
@@ -128,9 +128,9 @@ h1 span {
   section {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    margin-left: 3rem;
     margin-bottom: 1rem;
+    margin-left: 3rem;
+    width: 50%;
   }
 
   .image-header {
@@ -152,13 +152,13 @@ h1 span {
   }
 
   .description {
-    padding: 0;
     font-size: 0.8rem;
+    padding: 0;
     width: 19rem;
   }
 
   .data-info {
-    padding-top: 3rem;
     font-size: 0.6rem;
+    padding-top: 3rem;
   }
 }
