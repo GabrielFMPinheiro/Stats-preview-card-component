@@ -139,7 +139,7 @@ h1 span {
 
   section .data-container {
     display: flex;
-    gap: 4rem
+    gap: 5.5rem
   }
 
   h1, .description, .data-info {
